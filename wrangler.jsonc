@@ -7,6 +7,10 @@
     { "pattern": "www.mayurmankar.dev", "custom_domain": true }
   ],
   "workers_dev": false,
+  // Branch pushes get a preview at <branch>-mayurmankar-dev-github-io.<subdomain>.workers.dev; production stays on the custom domains.
+  // https://developers.cloudflare.com/workers/previews/
+  "preview_urls": true,
+  "previews": {},
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"

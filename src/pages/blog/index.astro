@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { getPosts, formatDate } from '../../utils/posts';
+
+const posts = await getPosts();
+---
+<Base title="Blog" description="Posts by Mayur Mankar on vehicle routing, operations research, quantum optimization, machine learning and software engineering.">
+    <SiteHeader />
+
+    <h1 class="blog-title"><heading>Blog</heading></h1>
+
+    {posts.length === 0 ? (
+        <p>No posts yet. Check back soon!</p>
+    ) : (
+        <ul class="post-list">
+            {posts.map((post) => (
+                <li>
+                    <span class="post-date">{formatDate(post.data.date)}</span>
+                    <div>
+                        <a class="post-link" href={`/blog/${post.id}/`}>{post.data.title}</a>
+                        {post.data.draft && <span class="draft-badge">draft</span>}
+                        <p class="post-summary">{post.data.description}</p>
+                    </div>
+                </li>
+            ))}
+        </ul>
+    )}
+
+    <p class="rss-link"><a href="/rss.xml">RSS feed</a></p>
+</Base>

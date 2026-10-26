@@ -1,30 +1,38 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mayur Mankar</title>
+---
+import Base from '../layouts/Base.astro';
+import { getPosts, formatDate } from '../utils/posts';
+import { EMAIL } from '../consts';
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+const recentPosts = (await getPosts()).slice(0, 3);
 
-    <meta name="author" content="Mayur Mankar">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="Mayur Mankar | Software Engineer@Spindle Quantum | IISER Bhopal Alumnus | Vehicle Routing | Operations Research | Quantum Optimization | Machine Learning">
-    <meta name="keywords" content="Mayur Mankar, Spindle Quantum, IISER Bhopal, Software Engineer, Vehicle Routing, Operations Research, Quantum Optimization, Machine Learning">
-
-    <link rel="icon" type="image/png" href="images/M.png">
-</head>
-<body class="bg_colour">
-    <main class="page">
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mayur Mankar',
+  url: 'https://mayurmankar.dev',
+  image: 'https://mayurmankar.dev/images/profile-photo-400.jpg',
+  email: `mailto:${EMAIL}`,
+  jobTitle: 'Software Engineer',
+  worksFor: { '@type': 'Organization', name: 'Spindle Quantum', url: 'https://spindlequantum.com' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Indian Institute of Science Education and Research Bhopal' },
+  sameAs: [
+    'https://github.com/mayurmankar-dev',
+    'https://www.linkedin.com/in/mayurmankar',
+    'https://x.com/mayurmankar_dev',
+    'https://www.researchgate.net/profile/Mayur-Mankar-2',
+  ],
+};
+---
+<Base>
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify(person)} />
 
         <!-- Name tab -->
         <header class="intro">
-            <a class="intro-photo" href="images/profile-photo.jpg"><img alt="profile photo" src="images/profile-photo-400.jpg" width="400" height="400" class="img-circle profile-photo"></a>
+            <a class="intro-photo" href="/images/profile-photo.jpg"><img alt="profile photo" src="/images/profile-photo-400.jpg" width="400" height="400" class="img-circle profile-photo"></a>
             <div class="intro-text">
                 <h1><name>Mayur Mankar</name></h1>
                 <p class="nav-links">
+                    <a href="/blog/">Blog</a> &nbsp;|&nbsp;
                     <a href="#news">News</a> &nbsp;|&nbsp;
                     <a href="#skills">Skills</a> &nbsp;|&nbsp;
                     <a href="#work">Work</a> &nbsp;|&nbsp;
@@ -51,7 +59,7 @@
             </p> -->
             <p>
                 Feel free to check out my
-                <a href="data/Mayur_Mankar_Resume.pdf" target="_blank">resume</a>
+                <a href="/data/Mayur_Mankar_Resume.pdf" target="_blank">resume</a>
                 and drop me an
                 <a href="mailto:mayurmankar.dev@gmail.com">e-mail</a>
                 if you want to chat with me!
@@ -59,7 +67,7 @@
             <p class="quick-links">
                 ~&nbsp;
                 <a href="mailto:mayurmankar.dev@gmail.com">Email</a> &nbsp;|&nbsp;
-                <a href="data/Mayur_Mankar_Resume.pdf" target="_blank">Resume</a> &nbsp;|&nbsp;
+                <a href="/data/Mayur_Mankar_Resume.pdf" target="_blank">Resume</a> &nbsp;|&nbsp;
                 <a href="https://www.researchgate.net/profile/Mayur-Mankar-2" target="_blank">ResearchGate</a> &nbsp;|&nbsp;
                 <a href="https://github.com/mayurmankar-dev" target="_blank">Github</a> &nbsp;|&nbsp;
                 <a href="https://www.linkedin.com/in/mayurmankar" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
@@ -68,6 +76,26 @@
             </p>
         </section>
         <hr class="soft">
+
+<!-- Recent posts -->
+
+        {recentPosts.length > 0 && (
+            <Fragment>
+                <section>
+                    <heading>Recent Posts</heading>
+                    <ul class="post-list">
+                        {recentPosts.map((post) => (
+                            <li>
+                                <span class="post-date">{formatDate(post.data.date)}</span>
+                                <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+                            </li>
+                        ))}
+                    </ul>
+                    <p><a href="/blog/">All posts &rarr;</a></p>
+                </section>
+                <hr class="soft">
+            </Fragment>
+        )}
 
 <!-- News -->
 
@@ -218,7 +246,7 @@
                 </div>
 
                 <div class="entry">
-                    <div class="entry-logo"><img src="images/iit-roorkee-logo.png" alt="IIT Roorkee logo" loading="lazy"></div>
+                    <div class="entry-logo"><img src="/images/iit-roorkee-logo.png" alt="IIT Roorkee logo" loading="lazy"></div>
                     <div class="entry-body">
                         <papertitle style="color:gray"><big>exploreCSR 2023-2024: Google Research Sponsored Mentorship Program</big></papertitle> <papertitle><big> | Indian Institute of Technology Roorkee</big></papertitle>
                         <div class="entry-date">2024</div>
@@ -227,7 +255,7 @@
                 </div>
 
                 <div class="entry">
-                    <div class="entry-logo"><img src="images/iassrfp.png" alt="Science Academies Summer Research Fellowship logo" loading="lazy"></div>
+                    <div class="entry-logo"><img src="/images/iassrfp.png" alt="Science Academies Summer Research Fellowship logo" loading="lazy"></div>
                     <div class="entry-body">
                         <papertitle style="color:gray"><big>Science Academies Summer Research Fellowship Program</big></papertitle> <papertitle><big> | Shiv Nadar Institute of Eminence</big></papertitle>
                         <div class="entry-date">May '23 - July '23</div>
@@ -236,7 +264,7 @@
                 </div>
 
                 <div class="entry">
-                    <div class="entry-logo"><img src="images/iitropar.jpg" alt="IIT Ropar logo" loading="lazy"></div>
+                    <div class="entry-logo"><img src="/images/iitropar.jpg" alt="IIT Ropar logo" loading="lazy"></div>
                     <div class="entry-body">
                         <papertitle style="color:gray"><big>2023 Energy Mentors - IIT Ropar Internship Program</big></papertitle> <papertitle><big> | Indian Institute of Technology Ropar</big></papertitle>
                         <div class="entry-date">May '23 - July '23</div>
@@ -245,7 +273,7 @@
                 </div>
 
                 <div class="entry">
-                    <div class="entry-logo"><img src="images/iitpatna.png" alt="IIT Patna logo" loading="lazy"></div>
+                    <div class="entry-logo"><img src="/images/iitpatna.png" alt="IIT Patna logo" loading="lazy"></div>
                     <div class="entry-body">
                         <papertitle style="color:gray"><big>Winter Intern</big></papertitle> <papertitle><big> | Indian Institute of Technology Patna</big></papertitle>
                         <div class="entry-date">Dec '22 - Jan '23</div>
@@ -264,7 +292,7 @@
             <div id="content-publications" class="collapse in">
 
                 <div class="entry">
-                    <div class="entry-logo"><img src="images/namscon.png" alt="NAMSCON 2023 logo" loading="lazy"></div>
+                    <div class="entry-logo"><img src="/images/namscon.png" alt="NAMSCON 2023 logo" loading="lazy"></div>
                     <div class="entry-body">
                         <papertitle><big>Enhancing Diagnostic Accuracy by Remediation of Adversarial Attacks on Deep Learning-Based Neuroimaging Systems</big></papertitle>
                         <p><em>Accepted at NAMSCON 2023</em></p>
@@ -280,7 +308,7 @@
                 </div>
 
                 <div class="entry">
-                    <div class="entry-logo"><img src="images/namscon.png" alt="NAMSCON 2023 logo" loading="lazy"></div>
+                    <div class="entry-logo"><img src="/images/namscon.png" alt="NAMSCON 2023 logo" loading="lazy"></div>
                     <div class="entry-body">
                         <papertitle><big>Ready TransInformation-based Assessment of Neurocognitive Salience level Electrophysiologically</big></papertitle>
                         <p><em>Accepted at NAMSCON 2023</em></p>
@@ -320,8 +348,4 @@
             </div>
         </section>
         <hr class="soft">
-
-    </main>
-</body>
-
-</html>
+</Base>

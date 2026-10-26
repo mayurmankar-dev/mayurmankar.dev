@@ -114,7 +114,7 @@ body.bg_colour {
 
 .intro {
   display: grid;
-  grid-template-columns: 160px 1fr 160px;
+  grid-template-columns: 140px 1fr 140px;
   align-items: center;
   gap: 24px;
   margin-bottom: 24px;
@@ -288,5 +288,130 @@ hr.soft {
 
   .entry-logo {
     align-items: flex-start;
+  }
+}
+
+/* Blog */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+.site-name {
+  font-size: 24px;
+  color: #1d1b18;
+}
+
+.blog-title {
+  margin: 0 0 16px;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.post-list li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.post-date {
+  color: #6e685e;
+  white-space: nowrap;
+}
+
+.post-link {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.post-summary {
+  margin: 2px 0 0;
+}
+
+.draft-badge {
+  margin-left: 8px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #fff0a0;
+  font-size: 12px;
+}
+
+.post {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.post-title {
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 8px 0 6px;
+}
+
+.post-meta {
+  color: #6e685e;
+  margin-bottom: 28px;
+}
+
+.post-body {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.post-body h2,
+.post-body h3 {
+  margin: 32px 0 12px;
+  line-height: 1.3;
+}
+
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.post-body pre {
+  border: 0;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+.post-body :not(pre) > code {
+  color: inherit;
+  background: #efe8d6;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.post-body blockquote {
+  border-left: 3px solid #1d1b18;
+  margin: 20px 0;
+  padding: 2px 16px;
+  font-size: inherit;
+  color: #3a3631;
+}
+
+@media (max-width: 640px) {
+  .post-list li {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .post-title {
+    font-size: 26px;
+  }
+
+  .post-body {
+    font-size: 16px;
   }
 }

@@ -7,6 +7,10 @@ description: One or two sentences shown in the blog list, search results and lin
 date: 2026-10-26
 # updated: 2026-11-01
 tags: [optimization, python]
+# Cover image for link previews is generated from the title automatically.
+# To use your own instead, put a 1200×630 image in public/images/blog/ and uncomment:
+# image: /images/blog/my-cover.png
+# imageAlt: What the image shows
 draft: true # set to false (or delete this line) to publish
 ---
 

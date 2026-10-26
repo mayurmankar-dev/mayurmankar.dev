@@ -393,6 +393,17 @@ hr.soft {
   padding: 1px 5px;
 }
 
+/* Markdown checklists: the checkbox replaces the bullet */
+.post-body .contains-task-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-body .task-list-item input {
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+}
+
 .post-body blockquote {
   border-left: 3px solid #1d1b18;
   margin: 20px 0;

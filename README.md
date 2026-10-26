@@ -30,6 +30,7 @@ npm run build    # production build into dist/
 ## Infrastructure
 
 Pushing to `main` triggers Cloudflare Workers Builds (`npm run build`, then `npx wrangler deploy`). The Worker name, custom domains (`mayurmankar.dev`, `www.mayurmankar.dev`) and disabled `workers.dev` URL are all in `wrangler.jsonc`.
+Security headers (`nosniff`, `Referrer-Policy`, HSTS) are set for every response in `public/_headers`.
 
 Settings that live outside the repo:
 

@@ -1,7 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "mayurmankar-dev",
+  "name": "mayurmankar-dev-github-io",
   "compatibility_date": "2026-10-01",
+  "routes": [
+    { "pattern": "mayurmankar.dev", "custom_domain": true },
+    { "pattern": "www.mayurmankar.dev", "custom_domain": true }
+  ],
+  "workers_dev": false,
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"

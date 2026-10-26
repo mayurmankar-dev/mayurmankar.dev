@@ -6,7 +6,6 @@ import { EMAIL } from '../consts';
 const recentPosts = (await getPosts()).slice(0, 3);
 
 const person = {
-  '@context': 'https://schema.org',
   '@type': 'Person',
   // Stable ID so other sites (careerbonus.co's Organization.founder) can refer to this same person.
   '@id': 'https://mayurmankar.dev/#person',
@@ -24,15 +23,25 @@ const person = {
     'https://www.researchgate.net/profile/Mayur-Mankar-2',
   ],
 };
+
+// WebSite tells Google which name to show for the site in results ("site name").
+const website = {
+  '@type': 'WebSite',
+  '@id': 'https://mayurmankar.dev/#website',
+  url: 'https://mayurmankar.dev/',
+  name: 'Mayur Mankar',
+  publisher: { '@id': 'https://mayurmankar.dev/#person' },
+};
+const structuredData = { '@context': 'https://schema.org', '@graph': [website, person] };
 ---
-<Base>
-    <script type="application/ld+json" slot="head" set:html={JSON.stringify(person)} />
+<Base fullTitle="Mayur Mankar – Software Engineer, Optimization & Quantum">
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify(structuredData)} />
 
         <!-- Name tab -->
         <header class="intro">
             <a class="intro-photo" href="/images/profile-photo.jpg"><img alt="profile photo" src="/images/profile-photo-400.jpg" width="400" height="400" class="img-circle profile-photo"></a>
             <div class="intro-text">
-                <h1><name>Mayur Mankar</name></h1>
+                <h1 class="intro-name">Mayur Mankar</h1>
                 <p class="nav-links">
                     <a href="/blog/">Blog</a> &nbsp;|&nbsp;
                     <a href="#news">News</a> &nbsp;|&nbsp;
@@ -88,7 +97,7 @@ const person = {
         {recentPosts.length > 0 && (
             <Fragment>
                 <section>
-                    <heading>Recent Posts</heading>
+                    <h2 class="section-title">Recent Posts</h2>
                     <ul class="post-list">
                         {recentPosts.map((post) => (
                             <li>
@@ -105,9 +114,10 @@ const person = {
 
 <!-- News -->
 
-        <section>
-            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-news" id="news"><heading>News</heading></button>
-            <div id="content-news" class="collapse in">
+        <section id="news">
+            <details open>
+            <summary><h2 class="section-title">News</h2></summary>
+            <div>
                 <div class="news-item">
                     <span class="news-date">Jun '25</span>
                     <span>Joined <a href="https://spindlequantum.com" target="_blank">Spindle Quantum</a> as a Software Engineer (SDE-I), working on vehicle routing and fleet optimization!</span>
@@ -169,14 +179,16 @@ const person = {
                     <span>Got selected for IASc-INSA-NASI Summer Research Fellowship 2023!</span>
                 </div>
             </div>
+            </details>
         </section>
         <hr class="soft">
 
 <!-- Technical Skills -->
 
-        <section>
-            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-skills" id="skills"><heading>Technical Skills</heading></button>
-            <div id="content-skills" class="collapse in">
+        <section id="skills">
+            <details open>
+            <summary><h2 class="section-title">Technical Skills</h2></summary>
+            <div>
                 <div class="skills">
                     <strong>Optimization &amp; OR</strong>
                     <span>OR-Tools, QUBO / Quantum Optimization, Qiskit, Constraint Modeling</span>
@@ -192,18 +204,20 @@ const person = {
                     <span>PyTorch, TensorFlow, Keras, OpenCV</span>
                 </div>
             </div>
+            </details>
         </section>
         <hr class="soft">
 
 <!-- Work Experience -->
 
-        <section>
-            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-work" id="work"><heading>Work Experience</heading></button>
-            <div id="content-work" class="collapse in">
+        <section id="work">
+            <details open>
+            <summary><h2 class="section-title">Work Experience</h2></summary>
+            <div>
 
                 <div class="entry entry-full">
                     <div class="entry-body">
-                        <papertitle style="color:gray"><big>Software Engineer (SDE-I)</big></papertitle> <papertitle><big> | <a href="https://spindlequantum.com" target="_blank">Spindle Quantum</a></big></papertitle>
+                        <strong class="entry-title entry-role">Software Engineer (SDE-I)</strong> <strong class="entry-title"> | <a href="https://spindlequantum.com" target="_blank">Spindle Quantum</a></strong>
                         <div class="entry-date">June '25 - Present</div>
                         <ul>
                             <li>Develop and maintain backend and optimization systems for a Vehicle Routing platform, contributing to production logistics and fleet optimization workflows.</li>
@@ -216,7 +230,7 @@ const person = {
 
                 <div class="entry entry-full">
                     <div class="entry-body">
-                        <papertitle style="color:gray"><big>Co-founder</big></papertitle> <papertitle><big> | <a href="https://pawscanai-68de4.web.app/" target="_blank">PawScan.AI</a></big></papertitle>
+                        <strong class="entry-title entry-role">Co-founder</strong> <strong class="entry-title"> | <a href="https://pawscanai-68de4.web.app/" target="_blank">PawScan.AI</a></strong>
                         <div class="entry-date">Jan '24 - Apr '25</div>
                         <ul>
                             <li>Co-founded a startup building end-to-end AI surveillance systems that fuse gait and face recognition for robust human identification.</li>
@@ -226,19 +240,21 @@ const person = {
                 </div>
 
             </div>
+            </details>
         </section>
         <hr class="soft">
 
 <!-- Research Internships -->
 
-        <section>
-            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-research" id="research"><heading>Research Internships</heading></button>
-            <div id="content-research" class="collapse in">
+        <section id="research">
+            <details open>
+            <summary><h2 class="section-title">Research Internships</h2></summary>
+            <div>
 
                 <div class="entry">
                     <div class="entry-logo"></div>
                     <div class="entry-body">
-                        <papertitle style="color:gray"><big>ACM IKDD Uplink Research Internship 2024</big></papertitle> <papertitle><big> | Indian Institute of Technology Delhi</big></papertitle>
+                        <strong class="entry-title entry-role">ACM IKDD Uplink Research Internship 2024</strong> <strong class="entry-title"> | Indian Institute of Technology Delhi</strong>
                         <p>Worked under the supervision of Dr. Srikanta Bedathur on adversarial robustness in temporal graphs, developing attack and defense strategies for dynamic networks.</p>
                     </div>
                 </div>
@@ -246,7 +262,7 @@ const person = {
                 <div class="entry">
                     <div class="entry-logo"></div>
                     <div class="entry-body">
-                        <papertitle style="color:gray"><big>CHANAKYA PG Fellowship</big></papertitle> <papertitle><big> | I-DAPT Hub Foundation, IIT (BHU) Varanasi</big></papertitle>
+                        <strong class="entry-title entry-role">CHANAKYA PG Fellowship</strong> <strong class="entry-title"> | I-DAPT Hub Foundation, IIT (BHU) Varanasi</strong>
                         <p>Built an end-to-end camera-LiDAR multi-modal data collection and pre-processing pipeline for downstream 3D object detection.</p>
                     </div>
                 </div>
@@ -254,7 +270,7 @@ const person = {
                 <div class="entry">
                     <div class="entry-logo"><img src="/images/iit-roorkee-logo.png" alt="IIT Roorkee logo" loading="lazy"></div>
                     <div class="entry-body">
-                        <papertitle style="color:gray"><big>exploreCSR 2023-2024: Google Research Sponsored Mentorship Program</big></papertitle> <papertitle><big> | Indian Institute of Technology Roorkee</big></papertitle>
+                        <strong class="entry-title entry-role">exploreCSR 2023-2024: Google Research Sponsored Mentorship Program</strong> <strong class="entry-title"> | Indian Institute of Technology Roorkee</strong>
                         <div class="entry-date">2024</div>
                         <p>Worked under the supervision of <a href="https://neeteshkumar.netlify.app/" target="_blank">Dr. Neetesh Kumar</a> on AI-driven models to detect anomalous road-traffic patterns, improving road-safety analytics.</p>
                     </div>
@@ -263,7 +279,7 @@ const person = {
                 <div class="entry">
                     <div class="entry-logo"><img src="/images/iassrfp.png" alt="Science Academies Summer Research Fellowship logo" loading="lazy"></div>
                     <div class="entry-body">
-                        <papertitle style="color:gray"><big>Science Academies Summer Research Fellowship Program</big></papertitle> <papertitle><big> | Shiv Nadar Institute of Eminence</big></papertitle>
+                        <strong class="entry-title entry-role">Science Academies Summer Research Fellowship Program</strong> <strong class="entry-title"> | Shiv Nadar Institute of Eminence</strong>
                         <div class="entry-date">May '23 - July '23</div>
                         <p>Worked under the supervision of <a href="https://www.cse.iitd.ac.in/~ssen/" target="_blank">Dr. Sandeep Sen</a> on improving the attention-aware multi-prototype transductive inference (attMPTI) method for few-shot 3D point-cloud semantic segmentation of indoor scenes. This work got accepted at IndoML 2023, IIT Bombay.</p>
                     </div>
@@ -272,7 +288,7 @@ const person = {
                 <div class="entry">
                     <div class="entry-logo"><img src="/images/iitropar.jpg" alt="IIT Ropar logo" loading="lazy"></div>
                     <div class="entry-body">
-                        <papertitle style="color:gray"><big>2023 Energy Mentors - IIT Ropar Internship Program</big></papertitle> <papertitle><big> | Indian Institute of Technology Ropar</big></papertitle>
+                        <strong class="entry-title entry-role">2023 Energy Mentors - IIT Ropar Internship Program</strong> <strong class="entry-title"> | Indian Institute of Technology Ropar</strong>
                         <div class="entry-date">May '23 - July '23</div>
                         <p>Collaborating within a five-member team, I contributed to developing a digital twin for a Hybrid Energy System.</p>
                     </div>
@@ -281,26 +297,28 @@ const person = {
                 <div class="entry">
                     <div class="entry-logo"><img src="/images/iitpatna.png" alt="IIT Patna logo" loading="lazy"></div>
                     <div class="entry-body">
-                        <papertitle style="color:gray"><big>Winter Intern</big></papertitle> <papertitle><big> | Indian Institute of Technology Patna</big></papertitle>
+                        <strong class="entry-title entry-role">Winter Intern</strong> <strong class="entry-title"> | Indian Institute of Technology Patna</strong>
                         <div class="entry-date">Dec '22 - Jan '23</div>
                         <p>Worked under the supervision of <a href="https://www.iitp.ac.in/~sriparna/" target="_blank">Dr. Sriparna Saha</a> on Explaining Stereotypes behind Cyberbullying Memes via Knowledge Enhanced Text Generation.</p>
                     </div>
                 </div>
 
             </div>
+            </details>
         </section>
         <hr class="soft">
 
 <!-- Publications -->
 
-        <section>
-            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-publications" id="publications"><heading>Publications</heading></button>
-            <div id="content-publications" class="collapse in">
+        <section id="publications">
+            <details open>
+            <summary><h2 class="section-title">Publications</h2></summary>
+            <div>
 
                 <div class="entry">
                     <div class="entry-logo"><img src="/images/namscon.png" alt="NAMSCON 2023 logo" loading="lazy"></div>
                     <div class="entry-body">
-                        <papertitle><big>Enhancing Diagnostic Accuracy by Remediation of Adversarial Attacks on Deep Learning-Based Neuroimaging Systems</big></papertitle>
+                        <strong class="entry-title">Enhancing Diagnostic Accuracy by Remediation of Adversarial Attacks on Deep Learning-Based Neuroimaging Systems</strong>
                         <p><em>Accepted at NAMSCON 2023</em></p>
                         <p>Digital health methodologies like A.I. with deep neural networks have become well-utilized for neuroimaging
                             analysis tasks like segmenting brain lesions, atrophy or tumor detection, diagnosis and grading. However, recent
@@ -316,7 +334,7 @@ const person = {
                 <div class="entry">
                     <div class="entry-logo"><img src="/images/namscon.png" alt="NAMSCON 2023 logo" loading="lazy"></div>
                     <div class="entry-body">
-                        <papertitle><big>Ready TransInformation-based Assessment of Neurocognitive Salience level Electrophysiologically</big></papertitle>
+                        <strong class="entry-title">Ready TransInformation-based Assessment of Neurocognitive Salience level Electrophysiologically</strong>
                         <p><em>Accepted at NAMSCON 2023</em></p>
                         <p>Evaluation of the neurocognitive salience level is an important critical need, whether in clinical monitoring or
                             stressful occupational settings. Since high-resolution low-cost telemetric dermal-patch leads are available for
@@ -332,18 +350,20 @@ const person = {
                 </div>
 
             </div>
+            </details>
         </section>
         <hr class="soft">
 
 <!-- Projects -->
 
-        <section>
-            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-projects" id="projects"><heading>Projects</heading></button>
-            <div id="content-projects" class="collapse in">
+        <section id="projects">
+            <details open>
+            <summary><h2 class="section-title">Projects</h2></summary>
+            <div>
 
                 <div class="entry entry-full">
                     <div class="entry-body">
-                        <papertitle><big>Dynamic Vehicle Routing &amp; Fleet Optimization System</big></papertitle>
+                        <strong class="entry-title">Dynamic Vehicle Routing &amp; Fleet Optimization System</strong>
                         <ul>
                             <li>Designed and developed an event-driven DVRP engine with stateful route management, supporting pickup-delivery, time windows, heterogeneous fleets, multi-depot operations, vehicle/driver constraints, and dynamic events including new orders, cancellations, traffic delays and vehicle breakdowns.</li>
                             <li>Architected a hierarchical optimization framework with a Trigger Decision Engine for event-driven optimization decisions, cost-aware insertion, vehicle- and region-level re-optimization, and QUBO-based global optimization; integrated state versioning, OSRM routing, FastAPI, and MongoDB/Firestore persistence.</li>
@@ -352,6 +372,7 @@ const person = {
                 </div>
 
             </div>
+            </details>
         </section>
         <hr class="soft">
 </Base>

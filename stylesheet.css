@@ -141,6 +141,7 @@ body.bg_colour {
 
 .profile-photo {
   width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }

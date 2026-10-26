@@ -5,13 +5,13 @@ import { getPosts, formatDate } from '../../utils/posts';
 
 const posts = await getPosts();
 ---
-<Base title="Blog" description="Posts by Mayur Mankar on vehicle routing, operations research, quantum optimization, machine learning and software engineering.">
+<Base title="Blog" noindex={posts.length === 0} description="Posts by Mayur Mankar on vehicle routing, operations research, quantum optimization, machine learning and software engineering.">
     <SiteHeader />
 
     <h1 class="blog-title"><heading>Blog</heading></h1>
 
     {posts.length === 0 ? (
-        <p>No posts yet. Check back soon!</p>
+        <p>First posts coming soon.</p>
     ) : (
         <ul class="post-list">
             {posts.map((post) => (

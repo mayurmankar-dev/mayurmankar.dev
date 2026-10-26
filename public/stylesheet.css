@@ -415,3 +415,10 @@ hr.soft {
     font-size: 16px;
   }
 }
+
+.site-footer {
+  margin-top: 32px;
+  color: #6e685e;
+  font-size: 14px;
+  text-align: center;
+}

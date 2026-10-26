@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { EMAIL } from '../consts';
+---
+<Base title="Privacy" description="How mayurmankar.dev uses analytics and cookies.">
+    <SiteHeader />
+
+    <article class="post">
+        <h1 class="post-title">Privacy</h1>
+        <p class="post-meta">Last updated 26 Oct 2026</p>
+
+        <div class="post-body">
+            <p>This is a personal website. It has no accounts, forms, comments or ads, and I don't sell or share any data. I use two analytics tools to understand which pages people read.</p>
+
+            <h2>Cloudflare Web Analytics</h2>
+            <p>The site is hosted on <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Cloudflare</a>, which also provides privacy-first visitor counts: page views, referring sites, countries and page load speed. It uses no cookies and doesn't track you across sites or build a profile of you.</p>
+
+            <h2>Google Analytics</h2>
+            <p>The site also uses <a href="https://policies.google.com/privacy" target="_blank">Google Analytics 4</a>, which sets first-party cookies (<code>_ga</code> and <code>_ga_*</code>) to tell new visitors from returning ones and to measure things like scrolling, outbound link clicks and file downloads. Google Analytics does not log or store IP addresses. Google Signals and ad personalization are turned off for this site.</p>
+            <p>You can opt out by blocking cookies in your browser, using a content blocker, or installing Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Analytics opt-out browser add-on</a>.</p>
+
+            <h2>Contact</h2>
+            <p>Questions about this page? Email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.</p>
+        </div>
+    </article>
+</Base>

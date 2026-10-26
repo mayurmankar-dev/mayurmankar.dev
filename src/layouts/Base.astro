@@ -52,9 +52,14 @@ const isProd = import.meta.env.PROD;
             <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
             <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
+                // Global, as in Google's official snippet (define:vars wraps this script in a function).
+                window.gtag = function gtag(){dataLayer.push(arguments);};
                 gtag('js', new Date());
-                gtag('config', GA_MEASUREMENT_ID);
+                // No ads on this site, so don't collect advertising signals.
+                gtag('config', GA_MEASUREMENT_ID, {
+                    allow_google_signals: false,
+                    allow_ad_personalization_signals: false
+                });
             </script>
         </Fragment>
     )}
@@ -63,6 +68,11 @@ const isProd = import.meta.env.PROD;
 <body class="bg_colour">
     <main class="page">
         <slot />
+        <footer class="site-footer">
+            &copy; {new Date().getFullYear()} Mayur Mankar &nbsp;&middot;&nbsp;
+            <a href="/privacy/">Privacy</a> &nbsp;&middot;&nbsp;
+            <a href="/rss.xml">RSS</a>
+        </footer>
     </main>
 </body>
 </html>

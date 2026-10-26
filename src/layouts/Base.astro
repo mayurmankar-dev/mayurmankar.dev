@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION, GA_MEASUREMENT_ID } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, GA_MEASUREMENT_ID, CF_ANALYTICS_TOKEN } from '../consts';
 
 interface Props {
   title?: string;
@@ -13,6 +13,7 @@ const { title, description = SITE_DESCRIPTION, image = '/images/profile-photo-40
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const imageURL = new URL(image, Astro.site);
+const isProd = import.meta.env.PROD;
 ---
 <!DOCTYPE HTML>
 <html lang="en">
@@ -43,7 +44,10 @@ const imageURL = new URL(image, Astro.site);
     <script is:inline src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script is:inline src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    {GA_MEASUREMENT_ID && (
+    {isProd && CF_ANALYTICS_TOKEN && (
+        <script is:inline type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: CF_ANALYTICS_TOKEN })}></script>
+    )}
+    {isProd && GA_MEASUREMENT_ID && (
         <Fragment>
             <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
             <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>

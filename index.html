@@ -1,772 +1,327 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Hi, Rishab Here. Please DELETE the two <script> tags below if you use this HTML, otherwise my analytics will track your page -->
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<!--     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102766803-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-102766803-2');
-    </script> -->
-
-
+<head>
+    <meta charset="UTF-8">
     <title>Mayur Mankar</title>
-    
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <meta name="author" content="Mayur Mankar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="Mayur Mankar | Research Affiliate@GeoAI4Ctities Lab | Summer Research Intern@Shiv Nadar University | Artificial Intelligence | Medical Imaging | Social Good | Healthcare">
-    <meta name="keywords" content="Mayur Mankar, GeoAI4Ctities Lab, IISER Bhopal, Artificial Intelligence, Medical Imaging">
+    <meta name="Description" content="Mayur Mankar | Software Engineer@Spindle Quantum | IISER Bhopal Alumnus | Vehicle Routing | Operations Research | Quantum Optimization | Machine Learning">
+    <meta name="keywords" content="Mayur Mankar, Spindle Quantum, IISER Bhopal, Software Engineer, Vehicle Routing, Operations Research, Quantum Optimization, Machine Learning">
 
-    <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
     <link rel="icon" type="image/png" href="images/M.png">
 </head>
 <body class="bg_colour">
-    <table border=0 class="bg_colour" style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr style="padding:0px">
-            <td style="padding:0px">
-                
-                <!-- Name tab -->
-                <table border=0 class="bg_colour" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-                    
-                    
-                    <tr style="padding:0px">
-                        <td style="padding:2.5%;width:20%;max-width:20%">
-                            <a href="images/MayurMankarProfilePic.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/MayurMankarProfilePic.png" class="img-circle"></a>
-                        </td>
-                        <td style="padding:2.5%;width:60%;vertical-align:middle">
-                            <p style="text-align:center">
-                                <h1  style="text-align:center"><name>Mayur Mankar</name></h1>
-                            </p>
-                            <p style="text-align:center">
-                            &nbsp|&nbsp
-                            <a href="#news" onclick=Expand("news")>News</a>
-                            &nbsp|&nbsp
-                            <a href="#experience" onclick=Expand("experience")>Experience</a>
-                            &nbsp|&nbsp
-                            <a href="#publications" onclick=Expand("publications")>Publications</a>
-                            &nbsp|&nbsp
-                            <a href="#projects" onclick=Expand("projects")>Projects</a>
-                            &nbsp|&nbsp
-                            <a href="mailto:mayur25mankar@gmail.com">Contact</a>
-                            &nbsp|&nbsp
-                            </p>
-                        </td>
-                        <td style="padding:2.5%;width:10%;max-width:10%">
-                            <!-- <a href="images/RishabKhinchaProfilePic.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/RishabKhinchaProfilePic.png" class="hoverZoomLink"></a> -->
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                    <td colspan="2">
-                        <p style="text-align:center">
-                            &nbsp|&nbsp
-                            <a href="#news" onclick=Expand("news")>News</a>
-                            &nbsp|&nbsp
-                            <a href="#experience" onclick=Expand("experience")>Experience</a>
-                            &nbsp|&nbsp
-                            <a href="#publications" onclick=Expand("publications")>Publications</a>
-                            &nbsp|&nbsp
-                            <a href="#projects" onclick=Expand("projects")>Projects</a>
-                            &nbsp|&nbsp
-                            <a href="#contact" onclick=Expand("contact")>Contact</a>
-                            &nbsp|&nbsp
-                        </p>
-                    </td>
-                    </tr> -->
-                </tbody></table>
+    <main class="page">
 
+        <!-- Name tab -->
+        <header class="intro">
+            <a class="intro-photo" href="images/profile-photo.jpg"><img alt="profile photo" src="images/profile-photo.jpg" class="img-circle profile-photo"></a>
+            <div class="intro-text">
+                <h1><name>Mayur Mankar</name></h1>
+                <p class="nav-links">
+                    <a href="#news">News</a> &nbsp;|&nbsp;
+                    <a href="#skills">Skills</a> &nbsp;|&nbsp;
+                    <a href="#work">Work</a> &nbsp;|&nbsp;
+                    <a href="#research">Research</a> &nbsp;|&nbsp;
+                    <a href="#publications">Publications</a> &nbsp;|&nbsp;
+                    <a href="#projects">Projects</a> &nbsp;|&nbsp;
+                    <a href="mailto:mayurmankar.dev@gmail.com">Contact</a>
+                </p>
+            </div>
+        </header>
 
-                <!-- About section, quick links -->
+        <!-- About section, quick links -->
+        <section class="about">
+            <p>I am a Software Engineer (SDE-I) at <a href="https://spindlequantum.com" target="_blank">Spindle Quantum</a>, where I build backend and optimization systems for a vehicle routing platform used in production logistics and fleet optimization.
+                My work spans Operations Research, dynamic optimization, QUBO-based quantum optimization, and the infrastructure that ships it: Python services, CI/CD and Kubernetes on GCP.
+            </p>
+            <p>
+                I graduated in April 2025 with an Integrated BS-MS in Data Science and Engineering from the
+                <a href="https://www.iiserb.ac.in/" target="_blank">Indian Institute of Science Education and Research Bhopal</a>, where I worked with <a href="https://sites.google.com/view/vaibhavkumar1/home" target="_blank">Dr. Vaibhav Kumar</a> at the <a href="https://sites.google.com/iiserb.ac.in/geoai/home?authuser=0" target="_blank">GeoAI4Cities Lab</a> on 3D point clouds.
+                Before that, I did research on 3D computer vision, adversarial robustness and machine learning through internships at IIT Delhi, Shiv Nadar Institute of Eminence, IIT (BHU) Varanasi and IIT Roorkee.
+            </p>
+<!--        <p>
+                Previously, I've worked with <a href="https://snu.edu.in/faculty/prasun-kumar-roy/"  target="_blank">Dr. Prasun K. Roy</a> on  Securing Deep Neural Networks against Adversarial Attacks in MRI Imaging. This work got selected at NAMSON 2023, Bangalore.
+            </p> -->
+            <p>
+                Feel free to check out my
+                <a href="data/Mayur_Mankar_Resume.pdf" target="_blank">resume</a>
+                and drop me an
+                <a href="mailto:mayurmankar.dev@gmail.com">e-mail</a>
+                if you want to chat with me!
+            </p>
+            <p class="quick-links">
+                ~&nbsp;
+                <a href="mailto:mayurmankar.dev@gmail.com">Email</a> &nbsp;|&nbsp;
+                <a href="data/Mayur_Mankar_Resume.pdf" target="_blank">Resume</a> &nbsp;|&nbsp;
+                <a href="https://www.researchgate.net/profile/Mayur-Mankar-2" target="_blank">ResearchGate</a> &nbsp;|&nbsp;
+                <a href="https://github.com/mayurmankar-dev" target="_blank">Github</a> &nbsp;|&nbsp;
+                <a href="https://www.linkedin.com/in/mayurmankar" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+                <a href="https://x.com/mayurmankar_dev" target="_blank">X (Twitter)</a>
+                &nbsp;~
+            </p>
+        </section>
+        <hr class="soft">
 
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-                    <tr style="padding:0px">
-                        <td style="padding:2.5%;width:63%;vertical-align:middle">
-                            <p>I am a 4th year undergraduate student at
-                                <a href="https://www.iiserb.ac.in/" target="_blank">Indian Institute of Science Education and Research Bhopal</a> where I'm pursuing my Integrated BS-MS in <a href="https://www.iiserb.ac.in/" target="_blank">Data Science and Engineering</a>. I work with <a href="https://sites.google.com/view/vaibhavkumar1/home" target="_blank">Dr. Vaibhav Kumar</a> at the <a href="https://sites.google.com/iiserb.ac.in/geoai/home?authuser=0" target="_blank">GeoAI4Cities Lab</a> on 3D point clouds. 
-                                My research focuses on developing advanced 3D computer vision models and utilizing them to capture semantically informed 3D models of real-world environments, including 3D reconstruction and semantic understanding of these environments. 
-                            <p>
-<!--                                 Previously, I've worked with <a href="https://snu.edu.in/faculty/prasun-kumar-roy/"  target="_blank">Dr. Prasun K. Roy</a> on  Securing Deep Neural Networks against Adversarial Attacks in MRI Imaging. This work got selected at NAMSON 2023, Bangalore. 
-                            </p> -->
-                            <p>
-                                Feel free to check out my 
-                                <a href="data/Mayur_Mankar_Resume.pdf" target="_blank" >CV</a>
-                                 and drop me an 
-                                 <a href="mailto:mayur25mankar@gmail.com" target="_blank">e-mail</a>
-                                  if you want to chat with me! 
-                            </p>
-                            <p style="text-align:center">
-                                &nbsp~&nbsp
-                                <a href="mailto:mayur25mankar@gmail.com" target="_blank">Email</a> &nbsp|&nbsp
-                                <a href="data/Mayur_Mankar_Resume.pdf" target="_blank" >CV</a> &nbsp|&nbsp
-                                <a href="data/Mayur_Mankar_Resume.pdf" target="_blank" >Resume</a> &nbsp|&nbsp
-                                <a href="https://www.researchgate.net/profile/Mayur-Mankar-2" target="_blank" >ResearchGate</a> &nbsp|&nbsp
-                                <a href="https://github.com/mayur20169" target="_blank" >Github</a> &nbsp|&nbsp
-                                <a href="https://www.linkedin.com/in/mayur-mankar-2452311b7" target="_blank">LinkedIn</a> &nbsp|&nbsp
-                                <a href="https://twitter.com/Mayur25mankar" target="_blank">Twitter</a>
-                                &nbsp~&nbsp
-                            </p>
-                        </td>
-                        <!-- <td style="padding:2.5%;width:30%;max-width:30%">
-                            <a href="images/RishabKhinchaProfilePic.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/RishabKhinchaProfilePic_round.png" class="hoverZoomLink"></a>
-                        </td> -->
-                    </tr>
-                </tbody></table>
-                <hr class="soft">
 <!-- News -->
 
-                <!-- <br> -->
-                <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#content-news" id="news"><heading>News</heading></button>
-                <!-- <div class="container"> -->
-                <div id="content-news" class="collapse in">
-                <!-- <div class="scroll">  -->
-
-                <table border=0 class="bg_colour" style="padding:10px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Apr '24 &nbsp</p>
-                        </td>
-                        <td>      
-                            Got selected for <a href="https://ikdd.acm.org/uplink-2024.php" target="_blank">Uplink: ACM IKDD Research Internship 2024</a> under supervision of Dr. Srikanta Bedathur, IIT Delhi!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Feb '24 &nbsp</p>
-                        </td>
-                        <td>
-                            Got selected for travel grant to attend workshop on Reinforcement Learning at IISc, Bengaluru.
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Feb '24 &nbsp</p>
-                        </td>
-                        <td>
-                            Got selected for short presentation at Frontiers Symposium in Data Science 2024, IISER TVM.
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Jan '24 &nbsp</p>
-                        </td>
-                        <td>
-                            Selected for travel grant to participate in ICTS program "Theoretical approaches in cancer progression & treatment".
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Jan '24 &nbsp</p>
-                        </td>
-                        <td>
-                            Started working on my first startup "PawScan.AI"!
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Jan '24 &nbsp</p>
-                        </td>
-                        <td>
-                            Got selected for the exploreCSR 2023-2024: Google Research Sponsored Mentorship Program!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Jan '24 &nbsp</p>
-                        </td>
-                        <td>
-                            Undergraduate Teaching Assistant for course DSE313 : Artificial Intelligence at IISER Bhopal</a>!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Jan '24 &nbsp</p>
-                        </td>
-                        <td>
-                            Started working on my BS Thesis at <a href="https://sites.google.com/iiserb.ac.in/geoai/home?authuser=0" target="_blank">GeoAI4Cities Lab</a> under the supervision of <a href="https://sites.google.com/view/vaibhavkumar1/home" target="_blank">Dr. Vaibhav Kumar</a>!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Dec '23 &nbsp</p>
-                        </td>
-                        <td>
-                            Presented my work at <a href="https://indoml.in/" target="_blank">IndoML 2023, IIT Bombay</a>.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Dec '23 &nbsp</p>
-                        </td>
-                        <td>
-                            IEEE Travel Grant Winner for attending Winter School on Biometrics 2024, Shenzhen!
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Dec '23 &nbsp</p>
-                        </td>
-                        <td>
-                            Volunteered at International Society for Music Information Retrieval Conference (ISMIR) 2023, Milan.
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Oct '23 &nbsp</p>
-                        </td>
-                        <td>
-                            Presented my work at <a href="https://www.namscon2023.com/" target="_blank">NAMSCON 2023</a>.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Apr '23 &nbsp</p>
-                        </td>
-                        <td>
-                            Got selected for IASc-INSA-NASI Summer Research Fellowship 2023! 
-                        </td>
-                    <tr>
- <!--                       <td>
-                            <p style="color:darkblue; display:inline">Nov '20 &nbsp</p>
-                        </td>
-                        <td>
-                            I won the <a href="https://ecms.adelaide.edu.au/ingenuity/ingenuity-challenge" target="_blank"> Ingenuity Challenge</a> organized by the University of Adelaide in collaboration with the <a href="http://canberraai.net/caiss2020/index.html" target="_blank"> CAISS 2020</a>!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Oct '20 &nbsp</p>
-                        </td>
-                        <td>
-                            Our extended abstract got accepted at <a href="https://ml4health.github.io/" target="_blank">ML4H</a></a>, <a href="https://nips.cc/" target="_blank">NeurIPS 2020</a>.</em> Check out the preprint 
-                            </em><a href="https://arxiv.org/abs/2010.01440" target="_blank"> here</a>!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Oct '20 &nbsp</p>
-                        </td>
-                        <td>
-                            Our team Wind Watchers were placed in the bronze category of the <a href="https://www.hackerearth.com/challenges/competitive/shell-hackathon/" target="_blank">Shell AI Hackathon</a>!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Oct '20 &nbsp</p>
-                        </td>
-                        <td>
-                            Our extended abstract on Network Community Analysis is accepted to the YRS track <a href="https://cods-comad.in/" target="_blank">CODS-COMAD 2021</a>!
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Aug '20 &nbsp</p>
-                        </td>
-                        <td>
-                            Our paper on the detection of COVID-19 from chest X-rays accepted to the <a href="https://www.lungworkshop.org" target="_blank">TIA Workshop</a>  at <a href="http://miccai2020.org/en/" target="_blank">MICCAI 2020</a>!
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Aug '20 &nbsp</p>
-                        </td>
-                        <td>
-                            Selected for the first ever <a href="https://sites.google.com/view/aisummerschool2020">Google AI Summer School</a> - AI4SG & HCI track!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Aug '20 &nbsp</p>
-                        </td>
-                        <td>
-                            Received a pre-placement offer from Goldman Sachs to join full time!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Aug '20 &nbsp</p>
-                        </td>
-                        <td>
-                            Our paper on knowledge transfer in lesion accepted to the <a href="https://www.hvnguyen.com/lesslabelsimperfectdataml2020" target="_blank">MIL3ID Workshop</a>  at <a href="http://miccai2020.org/en/" target="_blank">MICCAI 2020</a>! <a href="https://95217d1b-f241-44bb-939f-69f6fb5c41d2.usrfiles.com/ugd/95217d_c974b9219af6431999ad269a1ae28bb3.pdf" target="_blank"> [preprint] </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">July '20 &nbsp</p>
-                        </td>
-                        <td>
-                            Runner-up in the Goldman Sachs Intern Coding Challenge!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">June '20  &nbsp  &nbsp</p>
-                        </td>
-                        <td>
-                            Started working on my senior thesis at MIT Media Lab!
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">May '20</p>
-                        </td>
-                        <td>
-                            Started working with Goldman Sachs as a summer analyst.
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Mar '20</p>
-                        </td>
-                        <td>
-                            Awarded an IPA position to work with <a href="https://scholar.google.com/citations?user=SRUYLREAAAAJ&hl=en" target="_blank">Dr. Franco Nori</a> at the <a href="https://www.riken.jp/en/research/labs/chief/theor_qtm_phys/" target="_blank">Theoretical Quantum Physics Laboratory, RIKEN.</a> 
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Mar '20</p>
-                        </td>
-                        <td>
-                            Paper on sleep apnea detection accepted as a full paper at ICISP '20. Check it out <a href="https://link.springer.com/chapter/10.1007/978-3-030-51935-3_40" target="_blank">here</a>! 
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">Jan '20</p>
-                        </td>
-                        <td>
-                            Started at <a href="https://www.bits-pilani.ac.in/appcair/">APPCAIR</a> as a student researcher.
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <p style="color:darkblue; display:inline">July '19</p>
-                        </td>
-                        <td>
-                            Attended my first ever academic conference - CASCA 2019, Montreal! 
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="tdNews" style="width:12%; vertical-align:top">
-                            <p style="color:darkblue; display:inline">Jan '19</p>
-                        </td>
-                        <td style="width:90%"> 
-                           Selected for the <a href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship" target="_blank">MITACS Globalink Research Internship</a> for summer 2019! 
-                        </td>
-                    </tr> -->
-                </tbody></table>
-                <!-- </div> -->
-                <!-- </div> -->
+        <section>
+            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-news" id="news"><heading>News</heading></button>
+            <div id="content-news" class="collapse in">
+                <div class="news-item">
+                    <span class="news-date">Jun '25</span>
+                    <span>Joined <a href="https://spindlequantum.com" target="_blank">Spindle Quantum</a> as a Software Engineer (SDE-I), working on vehicle routing and fleet optimization!</span>
                 </div>
-                <hr class="soft">
-                
-
-<!-- Experience -->
-
-                <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#content-experience" id="experience"><heading>Experience</heading></button>
-                <div id="content-experience" class="collapse in">
-
-                <table border=0 class="bg_colour" style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-                    <tr>
-                        <td style="padding:10px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/iit-roorkee-logo.png' width="150">
-                            </div>
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:top">
-                            <papertitle style="color:gray"><big>exploreCSR 2023-2024: Google Research Sponsored Mentorship Program</big> </papertitle> <papertitle ><big> | Indian Institute of Technology Roorkee</big></papertitle>
-                            <br>
-                            Jan '24 - Present
-                            <br>
-                            <br>
-                            <p>Working under the supervision of <a href="https://neeteshkumar.netlify.app/" target="_blank">Dr. Neetesh Kumar</a> on Anomaly detection on road traffic.</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:10px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/iassrfp.png' width="150">
-                            </div>
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:top">
-                            <papertitle style="color:gray"><big>Science Academies Summer Research Fellowship Program</big> </papertitle> <papertitle ><big> | Shiv Nadar Institute of Eminence</big></papertitle>
-                            <br>
-                            May '23 - July '23
-                            <br>
-                            <br>
-                            <p>Worked under the supervision of <a href="https://www.cse.iitd.ac.in/~ssen/" target="_blank">Dr. Sandeep Sen</a> on 3D Point Cloud Semantic Segmentation of Indoor Scenes using Few-shot Learning. This work got accepted at IndoML 2023, IIT Bombay.</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:10px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/iitropar.jpg' width="150">
-                            </div>
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:top">
-                            <papertitle style="color:gray"><big>2023 Energy Mentors - IIT Ropar Internship Program</big> </papertitle> <papertitle ><big> | Indian Institute of Technology Ropar</big></papertitle>
-                            <br>
-                            May '23 - July '23
-                            <br>
-                            <br>
-                            <p>Collaborating within a five-member team, I contributed to developing a digital twin for a Hybrid Energy System.</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:10px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/iitpatna.png' width="150">
-                            </div>
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:top">
-                            <papertitle style="color:gray"><big>Winter Intern</big> </papertitle> <papertitle><big> | Indian Institute of Technology Patna</big></papertitle>
-                            <br>
-                            Dec '22 - Jan '23
-                            <br>
-                            <br>
-                            <p>Worked under the supervision of <a href="https://www.iitp.ac.in/~sriparna/" target="_blank">Dr. Sriparna Saha</a> on Explaining Stereotypes behind Cyberbullying Memes via Knowledge Enhanced Text Generation.</p>
-                        </td>
-                    </tr>
-
-<!--                     <tr>
-                        <td style="padding:10px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/BITSPilani_logo.png' width="150">
-                            </div>
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:top">
-                            <papertitle style="color:gray"><big>Researcher</big> </papertitle> <papertitle><big> | APPCAIR & TCS Research</big></papertitle>
-                            <br>
-                            January '20 - Present
-                            <br>
-                            <br>
-                            <p>Building robust and interpetable models for medical imaging under the supervision of <a href="https://www.bits-pilani.ac.in/goa/ashwin/profile" target="_blank">Prof. Ashwin Srinivasan</a> and <a href="https://sites.google.com/site/lovekeshhome/" target="_blank">Dr. Lovekesh Vig</a>. Working on multiple projects involving identifying COVID-19 from Chest X-rays and lesion classification.</p>
-                        </td>
-                    </tr> 
-
-                    <tr>
-                        <td style="padding:10px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/western_logo.png' width="150">
-                            </div>
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:top">
-                            <papertitle style="color:gray"><big>MITACS GRI</big> </papertitle> <papertitle><big> | Western University</big></papertitle>
-                            <br>
-                            May '19 - July '19'
-                            <br>
-                            <br>
-                            <p>Worked as a MITACS Globalink Intern at the <a href="https://nearby-galaxies.github.io/" target="_blank">Nearby Galaxies</a> group under the supervision of <a href="http://www.physics.uwo.ca/people/faculty_web_pages/barmby.html" target="_blank">Prof. Pauline Barmby</a>.
-                                Built <a href="https://github.com/rishabkhincha/ImageCube-1" target="_blank">ImageCube</a>, an open source image processing tool in Python to processes multi-wavelength astronomical datasets.</p>
-                        </td>
-                    </tr> 
-
-                    <tr>
-                        <td style="padding:10px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/MyraMed_logo.png' width="150">
-                            </div>
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:top">
-                            <papertitle style="color:gray"><big>Summer Intern</big> </papertitle><papertitle><big> | Myra Medicine (now Medlife)</big></papertitle>
-                            <br>
-                            May '18 - July '18'
-                            <br>
-                            <br>
-                            <p>Worked in the intersection of business intelligence and data science supervised by <a href="https://www.linkedin.com/in/manikazad" target="_blank">Manik Singhal</a>. Initiated a customer segmentation project and submitted a report to the marketing team for user customisation and retention.</p>
-                        </td>
-                    </tr>  -->
-                </tbody></table>
+                <div class="news-item">
+                    <span class="news-date">Apr '25</span>
+                    <span>Graduated with an Integrated BS-MS in Data Science and Engineering from <a href="https://www.iiserb.ac.in/" target="_blank">IISER Bhopal</a>!</span>
                 </div>
-                <hr class="soft">
+                <div class="news-item">
+                    <span class="news-date">Apr '24</span>
+                    <span>Got selected for <a href="https://ikdd.acm.org/uplink-2024.php" target="_blank">Uplink: ACM IKDD Research Internship 2024</a> under supervision of Dr. Srikanta Bedathur, IIT Delhi!</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Feb '24</span>
+                    <span>Got selected for travel grant to attend workshop on Reinforcement Learning at IISc, Bengaluru.</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Feb '24</span>
+                    <span>Got selected for short presentation at Frontiers Symposium in Data Science 2024, IISER TVM.</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jan '24</span>
+                    <span>Selected for travel grant to participate in ICTS program "Theoretical approaches in cancer progression &amp; treatment".</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jan '24</span>
+                    <span>Started working on my first startup <a href="https://pawscanai-68de4.web.app/" target="_blank">PawScan.AI</a>!</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jan '24</span>
+                    <span>Got selected for the exploreCSR 2023-2024: Google Research Sponsored Mentorship Program!</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jan '24</span>
+                    <span>Undergraduate Teaching Assistant for course DSE313 : Artificial Intelligence at IISER Bhopal!</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jan '24</span>
+                    <span>Started working on my BS Thesis at <a href="https://sites.google.com/iiserb.ac.in/geoai/home?authuser=0" target="_blank">GeoAI4Cities Lab</a> under the supervision of <a href="https://sites.google.com/view/vaibhavkumar1/home" target="_blank">Dr. Vaibhav Kumar</a>!</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Dec '23</span>
+                    <span>Presented my work at <a href="https://indoml.in/" target="_blank">IndoML 2023, IIT Bombay</a>.</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Dec '23</span>
+                    <span>IEEE Travel Grant Winner for attending Winter School on Biometrics 2024, Shenzhen!</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Dec '23</span>
+                    <span>Volunteered at International Society for Music Information Retrieval Conference (ISMIR) 2023, Milan.</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Oct '23</span>
+                    <span>Presented my work at <a href="https://www.namscon2023.com/" target="_blank">NAMSCON 2023</a>.</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Apr '23</span>
+                    <span>Got selected for IASc-INSA-NASI Summer Research Fellowship 2023!</span>
+                </div>
+            </div>
+        </section>
+        <hr class="soft">
 
+<!-- Technical Skills -->
+
+        <section>
+            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-skills" id="skills"><heading>Technical Skills</heading></button>
+            <div id="content-skills" class="collapse in">
+                <div class="skills">
+                    <strong>Optimization &amp; OR</strong>
+                    <span>OR-Tools, QUBO / Quantum Optimization, Qiskit, Constraint Modeling</span>
+                    <strong>Programming</strong>
+                    <span>Python, R, C++, MATLAB</span>
+                    <strong>Backend &amp; APIs</strong>
+                    <span>FastAPI, REST APIs</span>
+                    <strong>Databases</strong>
+                    <span>MongoDB, MySQL, PostgreSQL</span>
+                    <strong>Cloud, DevOps &amp; MLOps</strong>
+                    <span>GCP, Docker, Kubernetes, Jenkins, GitLab CI/CD, SonarQube, Git, Linux</span>
+                    <strong>ML &amp; Data Science</strong>
+                    <span>PyTorch, TensorFlow, Keras, OpenCV</span>
+                </div>
+            </div>
+        </section>
+        <hr class="soft">
+
+<!-- Work Experience -->
+
+        <section>
+            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-work" id="work"><heading>Work Experience</heading></button>
+            <div id="content-work" class="collapse in">
+
+                <div class="entry entry-full">
+                    <div class="entry-body">
+                        <papertitle style="color:gray"><big>Software Engineer (SDE-I)</big></papertitle> <papertitle><big> | <a href="https://spindlequantum.com" target="_blank">Spindle Quantum</a></big></papertitle>
+                        <div class="entry-date">June '25 - Present</div>
+                        <ul>
+                            <li>Develop and maintain backend and optimization systems for a Vehicle Routing platform, contributing to production logistics and fleet optimization workflows.</li>
+                            <li>Designed routing and data-processing pipelines in Python using OSRM and MongoDB, with automated Excel&harr;JSON transformations for operational planning and reporting.</li>
+                            <li>Built and operate CI/CD pipelines on self-hosted GitLab and Jenkins with SonarQube integration, automating builds, tests and deployments that were previously manual.</li>
+                            <li>Containerized backend services with Docker and Kubernetes on Google Cloud Platform, standardizing environments across development and production.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entry entry-full">
+                    <div class="entry-body">
+                        <papertitle style="color:gray"><big>Co-founder</big></papertitle> <papertitle><big> | <a href="https://pawscanai-68de4.web.app/" target="_blank">PawScan.AI</a></big></papertitle>
+                        <div class="entry-date">Jan '24 - Apr '25</div>
+                        <ul>
+                            <li>Co-founded a startup building end-to-end AI surveillance systems that fuse gait and face recognition for robust human identification.</li>
+                            <li>Pre-incubated at IICE-IISER Bhopal and PIEDS-BITS Pilani; secured a development-and-deployment grant of Rs. 1,50,000 from iHub Anubhuti, IIIT Delhi Foundation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr class="soft">
+
+<!-- Research Internships -->
+
+        <section>
+            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-research" id="research"><heading>Research Internships</heading></button>
+            <div id="content-research" class="collapse in">
+
+                <div class="entry">
+                    <div class="entry-logo"></div>
+                    <div class="entry-body">
+                        <papertitle style="color:gray"><big>ACM IKDD Uplink Research Internship 2024</big></papertitle> <papertitle><big> | Indian Institute of Technology Delhi</big></papertitle>
+                        <p>Worked under the supervision of Dr. Srikanta Bedathur on adversarial robustness in temporal graphs, developing attack and defense strategies for dynamic networks.</p>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-logo"></div>
+                    <div class="entry-body">
+                        <papertitle style="color:gray"><big>CHANAKYA PG Fellowship</big></papertitle> <papertitle><big> | I-DAPT Hub Foundation, IIT (BHU) Varanasi</big></papertitle>
+                        <p>Built an end-to-end camera-LiDAR multi-modal data collection and pre-processing pipeline for downstream 3D object detection.</p>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-logo"><img src="images/iit-roorkee-logo.png" alt="IIT Roorkee logo"></div>
+                    <div class="entry-body">
+                        <papertitle style="color:gray"><big>exploreCSR 2023-2024: Google Research Sponsored Mentorship Program</big></papertitle> <papertitle><big> | Indian Institute of Technology Roorkee</big></papertitle>
+                        <div class="entry-date">2024</div>
+                        <p>Worked under the supervision of <a href="https://neeteshkumar.netlify.app/" target="_blank">Dr. Neetesh Kumar</a> on AI-driven models to detect anomalous road-traffic patterns, improving road-safety analytics.</p>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-logo"><img src="images/iassrfp.png" alt="Science Academies Summer Research Fellowship logo"></div>
+                    <div class="entry-body">
+                        <papertitle style="color:gray"><big>Science Academies Summer Research Fellowship Program</big></papertitle> <papertitle><big> | Shiv Nadar Institute of Eminence</big></papertitle>
+                        <div class="entry-date">May '23 - July '23</div>
+                        <p>Worked under the supervision of <a href="https://www.cse.iitd.ac.in/~ssen/" target="_blank">Dr. Sandeep Sen</a> on improving the attention-aware multi-prototype transductive inference (attMPTI) method for few-shot 3D point-cloud semantic segmentation of indoor scenes. This work got accepted at IndoML 2023, IIT Bombay.</p>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-logo"><img src="images/iitropar.jpg" alt="IIT Ropar logo"></div>
+                    <div class="entry-body">
+                        <papertitle style="color:gray"><big>2023 Energy Mentors - IIT Ropar Internship Program</big></papertitle> <papertitle><big> | Indian Institute of Technology Ropar</big></papertitle>
+                        <div class="entry-date">May '23 - July '23</div>
+                        <p>Collaborating within a five-member team, I contributed to developing a digital twin for a Hybrid Energy System.</p>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-logo"><img src="images/iitpatna.png" alt="IIT Patna logo"></div>
+                    <div class="entry-body">
+                        <papertitle style="color:gray"><big>Winter Intern</big></papertitle> <papertitle><big> | Indian Institute of Technology Patna</big></papertitle>
+                        <div class="entry-date">Dec '22 - Jan '23</div>
+                        <p>Worked under the supervision of <a href="https://www.iitp.ac.in/~sriparna/" target="_blank">Dr. Sriparna Saha</a> on Explaining Stereotypes behind Cyberbullying Memes via Knowledge Enhanced Text Generation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr class="soft">
 
 <!-- Publications -->
 
-                <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#content-publications" id="publications"><heading>Publications</heading></button>
-                <div id="content-publications" class="collapse in">
+        <section>
+            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-publications" id="publications"><heading>Publications</heading></button>
+            <div id="content-publications" class="collapse in">
 
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-                    <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/namscon.png' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Enhancing Diagnostic Accuracy by Remediation of Adversarial Attacks on Deep Learning-Based Neuroimaging Systems</papertitle></big>
-                            <br>
-                            <p><em>Accepted at NAMSCON 2023</em></p>
-                            <p>Digital health methodologies like A.I. with deep neural networks have become well-utilized for neuroimaging
-                                analysis tasks like segmenting brain lesions, atrophy or tumor detection, diagnosis and grading. However, recent
-                                diffident experiences demonstrate that carefully-engineered adversarial attacks can jeopardize medical
-                                informatics procedures and compromise imaging-based deep learning systems with small malicious
-                                imperceptible perturbations. This raises security concerns about the deployment of these computational
-                                neuroimaging systems in clinical settings. Our study is the first of its kind to investigate the robustness of deep
-                                learning-based MRI diagnostic systems using adversarial intrusions and formulates an iterative adversarial
-                                training approach to remedy these attacks.</p>
-                        </td>
-                    </tr>
-
-                    <tr onmouseout="covid_stop()" onmouseover="covid_start()" >
-                        <td style="padding:2px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <div class="two" id='covid_gradcam'>
-                                    <img src='images/one.png' width="120">
-                                </div>
-                                <img src='images/two.png' width="120">
-                            </div>
-                            <script type="text/javascript">
-                                function covid_start() {
-                                    document.getElementById('covid_gradcam').style.opacity = "1";
-                                }
-
-                                function covid_stop() {
-                                    document.getElementById('covid_gradcam').style.opacity = "0";
-                                }
-                                covid_stop()
-                            </script>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Ready TransInformation-based Assessment of Neurocognitive Salience level Electrophysiologically</papertitle></big>
-                            <br>
-                            <p><em>Accepted at NAMSCON 2023</em></p>
-                            <p>Evaluation of the neurocognitive salience level is an important critical need, whether in clinical monitoring or
-                                stressful occupational settings. Since high-resolution low-cost telemetric dermal-patch leads are available for
-                                physiological investigations, a suitable characteristic biopotential signal could be from an electrocoticographic/
-                                electroencephalographic framework. It is well-known that in neurophysiological perspective, a cardinal
-                                parameter for stimulus-response characterization is the transinformation interaction flow (in hartleys/bits) which
-                                characterizes the information flow congruence between two states of the neurophysiological system. We have
-                                earlier transinformation measure to accurately predict the stimulus-response function of the neural system in
-                                animal preparations, and formulate a general neurocomputational basis of neural information transmission[1].
-                                Here we investigate whether the transinformation parameter can also be utilized to delineate the neurocognitive
-                                salience level in different clinical situations.</p>
-                        </td>
-                    </tr>
-
-
-                </tbody></table>
+                <div class="entry">
+                    <div class="entry-logo"><img src="images/namscon.png" alt="NAMSCON 2023 logo"></div>
+                    <div class="entry-body">
+                        <papertitle><big>Enhancing Diagnostic Accuracy by Remediation of Adversarial Attacks on Deep Learning-Based Neuroimaging Systems</big></papertitle>
+                        <p><em>Accepted at NAMSCON 2023</em></p>
+                        <p>Digital health methodologies like A.I. with deep neural networks have become well-utilized for neuroimaging
+                            analysis tasks like segmenting brain lesions, atrophy or tumor detection, diagnosis and grading. However, recent
+                            diffident experiences demonstrate that carefully-engineered adversarial attacks can jeopardize medical
+                            informatics procedures and compromise imaging-based deep learning systems with small malicious
+                            imperceptible perturbations. This raises security concerns about the deployment of these computational
+                            neuroimaging systems in clinical settings. Our study is the first of its kind to investigate the robustness of deep
+                            learning-based MRI diagnostic systems using adversarial intrusions and formulates an iterative adversarial
+                            training approach to remedy these attacks.</p>
+                    </div>
                 </div>
-                <hr class="soft">
 
+                <div class="entry">
+                    <div class="entry-logo"><img src="images/namscon.png" alt="NAMSCON 2023 logo"></div>
+                    <div class="entry-body">
+                        <papertitle><big>Ready TransInformation-based Assessment of Neurocognitive Salience level Electrophysiologically</big></papertitle>
+                        <p><em>Accepted at NAMSCON 2023</em></p>
+                        <p>Evaluation of the neurocognitive salience level is an important critical need, whether in clinical monitoring or
+                            stressful occupational settings. Since high-resolution low-cost telemetric dermal-patch leads are available for
+                            physiological investigations, a suitable characteristic biopotential signal could be from an electrocoticographic/
+                            electroencephalographic framework. It is well-known that in neurophysiological perspective, a cardinal
+                            parameter for stimulus-response characterization is the transinformation interaction flow (in hartleys/bits) which
+                            characterizes the information flow congruence between two states of the neurophysiological system. We have
+                            earlier transinformation measure to accurately predict the stimulus-response function of the neural system in
+                            animal preparations, and formulate a general neurocomputational basis of neural information transmission[1].
+                            Here we investigate whether the transinformation parameter can also be utilized to delineate the neurocognitive
+                            salience level in different clinical situations.</p>
+                    </div>
+                </div>
 
+            </div>
+        </section>
+        <hr class="soft">
 
 <!-- Projects -->
 
-                <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#content-projects" id="projects"><heading>Projects</heading></button>
-                <div id="content-projects" class="collapse in">
+        <section>
+            <button type="button" class="section-toggle" data-toggle="collapse" data-target="#content-projects" id="projects"><heading>Projects</heading></button>
+            <div id="content-projects" class="collapse in">
 
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-                    <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/namscon.png' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Enhancing Diagnostic Accuracy by Remediation of Adversarial Attacks on Deep Learning-Based Neuroimaging Systems</papertitle></big>
-                            <br>
-                            <p><em>Accepted at NAMSCON 2023</em></p>
-                            <p>Digital health methodologies like A.I. with deep neural networks have become well-utilized for neuroimaging
-                                analysis tasks like segmenting brain lesions, atrophy or tumor detection, diagnosis and grading. However, recent
-                                diffident experiences demonstrate that carefully-engineered adversarial attacks can jeopardize medical
-                                informatics procedures and compromise imaging-based deep learning systems with small malicious
-                                imperceptible perturbations. This raises security concerns about the deployment of these computational
-                                neuroimaging systems in clinical settings. Our study is the first of its kind to investigate the robustness of deep
-                                learning-based MRI diagnostic systems using adversarial intrusions and formulates an iterative adversarial
-                                training approach to remedy these attacks.</p>
-                        </td>
-                    </tr>
-
-<!--                     <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/dem_unc_boost.png' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Uncertainty-Aware Boosted Ensembling in Multi-Modal Settings</papertitle></big>
-                            <br>
-                            <p>
-                            <em>Accepted at <a href="https://www.ijcnn.org/" target="_blank">IJCNN 2021</a>. <a href="https://arxiv.org/abs/2104.10715" target="_blank">[preprint]</a> <a href="https://github.com/usarawgi911/Uncertainty-aware-boosting" target="_blank">[code]</a> <a href="https://drive.google.com/file/d/1Qoxvr-QJhcpsHGRKuOT2xop8mopUUgYo/view?usp=sharing" target="_blank">[video]</a> <a href="data/IJCNN21slides.pdf" target="_blank">[slides]</a>
-                            </em>
-                            <br>
-                            <em>Extended abstract accepted at the <a href="https://ml4health.github.io/" target="_blank">Machine Learning for Health Workshop</a>, <a href="https://nips.cc/" target="_blank">NeurIPS 2020</a>.</em> 
-                            </em><a href="https://arxiv.org/abs/2010.01440" target="_blank"> [preprint] </a><a href="https://github.com/wazeerzulfikar/alzheimers-dementia" target="_blank"> [code] </a></p>
-                            <p>We propose an uncertainty-aware boosting technique for multi-modal ensembling in order to focus on the data points with higher associated uncertainty estimates, rather than the ones with higher loss values. We evaluate this method on healthcare tasks related to Dementia and Parkinson's disease which involve real-world multi-modal speech and text data, wherein our method shows an improved performance. Additional analysis suggests that introducing uncertainty-awareness into the boosted ensembles decreases the overall entropy of the system, making it more robust to heteroscedasticity in the data, as well as better calibrating each of the modalities along with high quality prediction intervals.</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/dse_unc.png' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Disentangling Predictive Uncertainties using Deep Split Ensembles</papertitle></big>
-                            <br>
-                            <p><em>Under submission. </em><a href="https://arxiv.org/pdf/2009.12406.pdf" target="_blank">[preprint]</a> <a href="https://github.com/rishabkhincha/deep-split-ensembles" target="_blank">[code]</a> </p>
-                            <p>We propose a conceptually simple non-Bayesian approach, deep split ensemble, to disentangle the predictive uncertainties using a multivariate Gaussian mixture model. The NNs are trained with clusters of input features, for uncertainty estimates per cluster. Extensive analyses using dataset shits and empirical rule highlight our inherently well-calibrated models. Our work further demonstrates its applicability in a multi-modal setting using a benchmark Alzheimer’s dataset and also shows how deep split ensembles can highlight hidden modality-specific biases</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/missing_dendogram.png' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Robustness to Missing Features using Hierarchical Clustering with Split Neural Networks</papertitle></big>
-                            <br>
-                            <p><em>Accepted in the <a href="https://aaai.org/Conferences/AAAI-21/student-abstract-call/" target="_blank">Student Abstract Program</a>, <a href="https://aaai.org/Conferences/AAAI-21/" target="_blank">AAAI 2021</a></em><a href="https://github.com/rishabkhincha/Robustness-to-Missing-Features" target="_blank"> [code]</a></p>
-                            <p>In this work, we propose a simple yet effective approach that clusters similar input features together using hierarchical clustering and then trains proportionately split neural networks with a joint loss. We evaluate this approach on a series of benchmark datasets and show promising improvements even with simple imputation techniques.</p>
-                        </td>
-                    </tr>
-
-                    <tr onmouseout="covid_stop()" onmouseover="covid_start()" >
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <div class="two" id='covid_gradcam'>
-                                    <img src='images/covid_post.png' width="120">
-                                </div>
-                                <img src='images/covid_pre.png' width="120">
-                            </div>
-                            <script type="text/javascript">
-                                function covid_start() {
-                                    document.getElementById('covid_gradcam').style.opacity = "1";
-                                }
-
-                                function covid_stop() {
-                                    document.getElementById('covid_gradcam').style.opacity = "0";
-                                }
-                                covid_stop()
-                            </script>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>CovidDiagnosis: Deep Diagnosis of COVID-19 Patients using Chest X-rays</papertitle></big>
-                            <br>
-                            <p><em>Accepted for oral presentation at the <a href="http://www.lungworkshop.org/" target="_blank">TIA Workshop</a>, <a href="https://miccai2020.org/" target="_blank">MICCAI 2020</a>.</em></p>
-                            <p>Built a pipeline comprising of models for lung isolation, followed by classification into different disease classes. We further augment our network with symptom embeddings produced by the CheXpert network and achieve excellent results. Our visualisation maps provide trustworthy and interpretable decisions to radiologists for clinical deployment.</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/lesion.jpg' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Knowledge Transfer in Lesions</big></papertitle>
-                            <br>
-                            <p><em>Accepted as a full paper at the <a href="https://www.hvnguyen.com/lesslabelsimperfectdataml2020" target="_blank">MIL3ID Workshop</a>, <a href="https://miccai2020.org/" target="_blank">MICCAI 2020</a>.</em> <a href="https://95217d1b-f241-44bb-939f-69f6fb5c41d2.usrfiles.com/ugd/95217d_c974b9219af6431999ad269a1ae28bb3.pdf" target="_blank"> [preprint] </a> <a href="data/A Case Study of Transfer of Lesion Knowledge-PPT.pdf" target="_blank"> [slides] </a></p>
-                            <p>Studied the transfer of lesion knowledge across organs for lesion classifcation tasks. Our designed experiments on the lung and brain tumour datasets show that transfer learning using lesion-augmented models perform substantially better than models trained using random weights or lesion-agnostic(like ImageNet) transfer.</p>
-                        </td>
-                    </tr> 
-
-                    <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/imagecube_pre.png' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>ImageCube</big></papertitle>
-                            <br>
-                            <p><em><a href="data/PyAstro_invite.pdf" target="_blank">Invited</a> for an hour long talk at <a href="http://openastronomy.org/pyastro/2020/" target="_blank">PyAstro 2020</a>, Trinity College Dublin. </em><a href="https://github.com/rishabkhincha/ImageCube-1" target="_blank">[code]</a></p>
-                            <p>Built an open source image processing tool in Python to process multi-wavelength astronomy images. On registereing the images from different telescope to a common world coordinate system, they are convolved and re-sampled to a common pixel scale. These images are now put together to form an image cube, to help for easy analysis.</p>
-                        </td>
-                    </tr> 
-
-                    <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/apnea_post.png' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Sleep Apnea Detection on an Embedded Device</big></papertitle>
-                            <br>
-                            <p><em>Accepted as a <a href="https://link.springer.com/chapter/10.1007/978-3-030-51935-3_40" target="_blank">full paper</a> at <a href="http://icisp-conf.org/" target="_blank">ICISP 2020</a>.</em> <a href="https://github.com/rishabkhincha/SleepApneaDetector" target="_blank">[code]</a></p>
-                            <p>We developed a data analysis pipeline combining dataset extraction, segmentation, signal cleaning and filtration to detect the presence of sleep apnea using SVMs. On testing our approach on the MIT-Physionet dataset, we find that the low computational complexity makes it well suited for deployment on embedded devices such as the Raspberry Pi.</p>
-                        </td>
-                    </tr> 
-
-                    <tr>
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <img src='images/socialnetwork_post.png' width="120">
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:top">
-                            <papertitle><big>Online Learning Assistant with Network Community Analysis</big></papertitle>
-                            <br>
-                            <p><em>Accepted at the Young Researcher's Symposium, <a href="https://cods-comad.in/" target="_blank">CODS-COMAD 2021</a></em></p>
-                            <p>Built a simple and scalable platform agnostic tool to aid online discussion forums using Social Network Analysis. We extract keywords from a chat, and list out the top users for this keyword and their activity histograms using a sliding window exponential ranking system. We have tested our methodology on Ubuntu IRC Logs and on our university chat for courses.</p>
-                        </td>
-                    </tr>  -->
-                    
-                    
-                </tbody></table>
+                <div class="entry entry-full">
+                    <div class="entry-body">
+                        <papertitle><big>Dynamic Vehicle Routing &amp; Fleet Optimization System</big></papertitle>
+                        <ul>
+                            <li>Designed and developed an event-driven DVRP engine with stateful route management, supporting pickup-delivery, time windows, heterogeneous fleets, multi-depot operations, vehicle/driver constraints, and dynamic events including new orders, cancellations, traffic delays and vehicle breakdowns.</li>
+                            <li>Architected a hierarchical optimization framework with a Trigger Decision Engine for event-driven optimization decisions, cost-aware insertion, vehicle- and region-level re-optimization, and QUBO-based global optimization; integrated state versioning, OSRM routing, FastAPI, and MongoDB/Firestore persistence.</li>
+                        </ul>
+                    </div>
                 </div>
-                <hr class="soft">
 
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>This template is a modification to Rishab Khincha's <a href="https://rishabkhincha.github.io/" target="_blank">website</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p></p>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </section>
+        <hr class="soft">
 
+    </main>
 </body>
 
 </html>

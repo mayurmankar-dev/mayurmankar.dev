@@ -74,58 +74,218 @@ a:hover {
   text-decoration: none;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
+body {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1d1b18;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-weight: 700;
 }
 
 heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
+  font-weight: 700;
 }
 
 name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 40px;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
+body.bg_colour {
+  background-color: #fbf6ea;
+  background-image: radial-gradient(#dcd3c1 1.4px, transparent 1.7px);
+  background-size: 26px 26px;
+  background-position: 13px 13px;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+/* Layout */
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 32px 48px;
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.intro {
+  display: grid;
+  grid-template-columns: 160px 1fr 160px;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+/* Empty third column keeps the name centered on the page */
+.intro::after {
+  content: "";
+}
+
+.intro h1 {
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.nav-links,
+.quick-links {
+  text-align: center;
+}
+
+.nav-links {
+  margin: 0;
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+hr.soft {
+  border-top: 2px solid #1d1b18;
+  margin: 28px 0;
+}
+
+.section-toggle {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0 0 16px;
+  text-align: left;
+}
+
+.section-toggle:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* News */
+
+.news-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  padding: 3px 0;
+}
+
+.news-date {
+  color: darkblue;
+  white-space: nowrap;
+}
+
+/* Technical skills */
+
+.skills {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 8px 24px;
+}
+
+/* Experience, publication and project entries */
+
+.entry {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  padding: 14px 0;
+}
+
+.entry-full {
+  grid-template-columns: 1fr;
+}
+
+.entry-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry-logo img {
+  max-width: 100%;
+  max-height: 140px;
+}
+
+.entry-date {
+  margin: 2px 0 10px;
+}
+
+.entry-body p,
+.entry-body ul {
+  margin: 8px 0 0;
+}
+
+.entry-body ul {
+  padding-left: 20px;
+}
+
+/* Phones */
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  heading {
+    font-size: 22px;
+  }
+
+  name {
+    font-size: 30px;
+  }
+
+  .page {
+    padding: 20px 16px 32px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+  }
+
+  .intro::after {
+    display: none;
+  }
+
+  .intro-photo {
+    width: 120px;
+  }
+
+  hr.soft {
+    margin: 20px 0;
+  }
+
+  .news-item {
+    grid-template-columns: 58px 1fr;
+    gap: 8px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .skills strong {
+    margin-top: 10px;
+  }
+
+  .skills strong:first-child {
+    margin-top: 0;
+  }
+
+  .entry {
+    grid-template-columns: 56px 1fr;
+    gap: 14px;
+  }
+
+  .entry-full {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-logo {
+    align-items: flex-start;
+  }
 }

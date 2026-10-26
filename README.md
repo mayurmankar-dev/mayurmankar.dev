@@ -26,3 +26,19 @@ npm run build    # production build into dist/
 - `src/consts.ts`: site title, description, Google Analytics ID
 - `public/`: static files (images, resume, stylesheet)
 - `wrangler.jsonc`: Cloudflare deploy config
+
+## Infrastructure
+
+Pushing to `main` triggers Cloudflare Workers Builds (`npm run build`, then `npx wrangler deploy`). The Worker name, custom domains (`mayurmankar.dev`, `www.mayurmankar.dev`) and disabled `workers.dev` URL are all in `wrangler.jsonc`.
+
+Settings that live outside the repo:
+
+| Where | Setting |
+|---|---|
+| Spaceship (registrar) | Nameservers point to Cloudflare; DNSSEC DS record from Cloudflare (key tag 2371) |
+| Cloudflare → DNS → Settings | DNSSEC enabled |
+| Cloudflare → Rules → Redirect Rules | "Redirect www to root": `https://www.*` → `https://${1}`, 301, preserve query string |
+| Cloudflare → SSL/TLS → Edge Certificates | Always Use HTTPS on; minimum TLS 1.2; Certificate Transparency monitoring on |
+| Cloudflare → Web Analytics | Site `mayurmankar.dev`, JS snippet mode (token in `src/consts.ts`) |
+| Google Analytics 4 | Account "Mayur Mankar", property `mayurmankar.dev`, stream ID in `src/consts.ts` |
+| Google Search Console | Domain property `mayurmankar.dev`; sitemap `https://mayurmankar.dev/sitemap-index.xml` submitted |

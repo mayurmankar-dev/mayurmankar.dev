@@ -8,6 +8,8 @@ const recentPosts = (await getPosts()).slice(0, 3);
 const person = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  // Stable ID so other sites (careerbonus.co's Organization.founder) can refer to this same person.
+  '@id': 'https://mayurmankar.dev/#person',
   name: 'Mayur Mankar',
   url: 'https://mayurmankar.dev',
   image: 'https://mayurmankar.dev/images/profile-photo-400.jpg',
@@ -50,6 +52,9 @@ const person = {
                 My work spans Operations Research, dynamic optimization, QUBO-based quantum optimization, and the infrastructure that ships it: Python services, CI/CD and Kubernetes on GCP.
             </p>
             <p>
+                Outside work, I run <a href="https://careerbonus.co" target="_blank">CareerBonus</a>: short videos, guides and a free weekly newsletter on jobs and internships, startups, freelancing and AI, for people in their first years of work.
+            </p>
+            <p>
                 I graduated in April 2025 with an Integrated BS-MS in Data Science and Engineering from the
                 <a href="https://www.iiserb.ac.in/" target="_blank">Indian Institute of Science Education and Research Bhopal</a>, where I worked with <a href="https://sites.google.com/view/vaibhavkumar1/home" target="_blank">Dr. Vaibhav Kumar</a> at the <a href="https://sites.google.com/iiserb.ac.in/geoai/home?authuser=0" target="_blank">GeoAI4Cities Lab</a> on 3D point clouds.
                 Before that, I did research on 3D computer vision, adversarial robustness and machine learning through internships at IIT Delhi, Shiv Nadar Institute of Eminence, IIT (BHU) Varanasi and IIT Roorkee.
@@ -68,6 +73,7 @@ const person = {
                 ~&nbsp;
                 <a href="mailto:mayurmankar.dev@gmail.com">Email</a> &nbsp;|&nbsp;
                 <a href="/data/Mayur_Mankar_Resume.pdf" target="_blank">Resume</a> &nbsp;|&nbsp;
+                <a href="https://careerbonus.co" target="_blank">CareerBonus</a> &nbsp;|&nbsp;
                 <a href="https://www.researchgate.net/profile/Mayur-Mankar-2" target="_blank">ResearchGate</a> &nbsp;|&nbsp;
                 <a href="https://github.com/mayurmankar-dev" target="_blank">Github</a> &nbsp;|&nbsp;
                 <a href="https://www.linkedin.com/in/mayurmankar" target="_blank">LinkedIn</a> &nbsp;|&nbsp;

@@ -1,0 +1,9 @@
+# Response headers for every page and file (Cloudflare Workers static assets).
+# https://developers.cloudflare.com/workers/static-assets/headers/
+#
+# HSTS: every .dev domain is already on browsers' HSTS preload list (HTTPS only, permanently),
+# so this states what browsers already enforce; no gradual rollout needed, unlike careerbonus.co.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

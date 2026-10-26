@@ -1,5 +1,9 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION, GA_MEASUREMENT_ID, CF_ANALYTICS_TOKEN } from '../consts';
+import { createHash } from 'node:crypto';
+import { SITE_TITLE, SITE_DESCRIPTION, GA_MEASUREMENT_ID, CF_ANALYTICS_TOKEN, OG_DEFAULT } from '../consts';
+
+// Versioned so link-preview caches refetch the default image when its text changes.
+const defaultImage = `/og/default.png?v=${createHash('sha1').update(OG_DEFAULT.title + OG_DEFAULT.kicker).digest('hex').slice(0, 8)}`;
 
 interface Props {
   title?: string;
@@ -17,7 +21,7 @@ interface Props {
 const {
   title,
   description = SITE_DESCRIPTION,
-  image = '/og/default.png',
+  image = defaultImage,
   imageAlt = title ?? SITE_TITLE,
   imageSize = image.startsWith('/og/') ? { width: 1200, height: 630 } : undefined,
   type = 'website',

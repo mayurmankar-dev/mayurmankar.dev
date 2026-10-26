@@ -7,3 +7,8 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Images rarely change; let browsers reuse them for a week instead of re-checking on every visit.
+# If you replace an image, give the new file a new name so visitors get it straight away.
+/images/*
+  Cache-Control: public, max-age=604800

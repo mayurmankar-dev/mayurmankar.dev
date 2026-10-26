@@ -8,6 +8,7 @@ Personal website and blog, built with [Astro](https://astro.build) and deployed 
    The file name becomes the URL: `https://mayurmankar.dev/blog/my-first-post/`.
 2. Fill in `title`, `description` and `date`, write the post in Markdown, and remove `draft: true` when it's ready.
 3. Put images in `public/images/blog/` and reference them as `/images/blog/name.png`.
+   A link-preview cover (1200×630) is generated from the title at build time (`src/utils/og.ts`, served at `/og/blog/<post>.png`); set `image:` in the post to use your own instead.
 4. Commit and push. Cloudflare rebuilds the site; the post appears on `/blog/`, the homepage, the RSS feed and the sitemap.
 
 ## Run locally

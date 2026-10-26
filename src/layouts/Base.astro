@@ -4,12 +4,22 @@ import { SITE_TITLE, SITE_DESCRIPTION, GA_MEASUREMENT_ID, CF_ANALYTICS_TOKEN } f
 interface Props {
   title?: string;
   description?: string;
-  image?: string;
+  image?: string;        // link-preview image path; defaults to the generated /og/default.png
+  imageAlt?: string;
+  imageSize?: { width: number; height: number };  // set when known (generated images are 1200×630)
   type?: 'website' | 'article';
   publishedTime?: Date;
 }
 
-const { title, description = SITE_DESCRIPTION, image = '/images/profile-photo-400.jpg', type = 'website', publishedTime } = Astro.props;
+const {
+  title,
+  description = SITE_DESCRIPTION,
+  image = '/og/default.png',
+  imageAlt = title ?? SITE_TITLE,
+  imageSize = image.startsWith('/og/') ? { width: 1200, height: 630 } : undefined,
+  type = 'website',
+  publishedTime,
+} = Astro.props;
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const imageURL = new URL(image, Astro.site);
@@ -31,8 +41,13 @@ const isProd = import.meta.env.PROD;
     <meta property="og:description" content={description}>
     <meta property="og:url" content={canonicalURL}>
     <meta property="og:image" content={imageURL}>
+    <meta property="og:image:alt" content={imageAlt}>
+    {imageSize && <meta property="og:image:width" content={String(imageSize.width)}>}
+    {imageSize && <meta property="og:image:height" content={String(imageSize.height)}>}
     {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()}>}
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Lets Google show large image previews (e.g. in Discover) and full text snippets. -->
+    <meta name="robots" content="max-image-preview:large">
     <meta name="twitter:site" content="@mayurmankar_dev">
 
     <link rel="icon" type="image/png" href="/favicon.png">

@@ -1,6 +1,8 @@
 export const SITE_TITLE = 'Mayur Mankar';
 export const SITE_DESCRIPTION =
-  'Mayur Mankar, Software Engineer at Spindle Quantum. Writing about vehicle routing, operations research, quantum optimization and machine learning.';
+  'Mayur Mankar, Software Engineer at Spindle Quantum, building AI, cloud and optimization systems. Writing about what works in production.';
+// Default link-preview image (pages without their own), generated at build time.
+export const OG_DEFAULT = { title: 'Mayur Mankar', kicker: 'Software Engineer · AI · Cloud' };
 export const EMAIL = 'mayurmankar.dev@gmail.com';
 
 // Analytics load only in production builds, so local `npm run dev` visits aren't counted.

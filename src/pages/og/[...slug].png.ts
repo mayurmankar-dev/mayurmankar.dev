@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getPosts } from '../../utils/posts';
 import { renderOgImage } from '../../utils/og';
+import { OG_DEFAULT } from '../../consts';
 
 // Builds /og/default.png (site pages) and /og/blog/<post>.png (one per post).
 export async function getStaticPaths() {
@@ -8,7 +9,7 @@ export async function getStaticPaths() {
   return [
     {
       params: { slug: 'default' },
-      props: { title: 'Mayur Mankar', kicker: 'Software Engineer · Optimization · Machine Learning' },
+      props: OG_DEFAULT,
     },
     ...posts.map((post) => ({
       params: { slug: `blog/${post.id}` },

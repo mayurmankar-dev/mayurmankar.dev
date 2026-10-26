@@ -1,4 +1,5 @@
 ---
+import { createHash } from 'node:crypto';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
@@ -12,7 +13,9 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const { title, description, date, updated, tags } = post.data;
-const image = post.data.image ?? `/og/blog/${post.id}.png`;
+// ?v= changes when the title changes, so LinkedIn and other caches fetch the new cover instead of reusing the old one.
+const coverVersion = createHash('sha1').update(title).digest('hex').slice(0, 8);
+const image = post.data.image ?? `/og/blog/${post.id}.png?v=${coverVersion}`;
 const imageAlt = post.data.imageAlt ?? title;
 const imageURL = new URL(image, Astro.site).href;
 

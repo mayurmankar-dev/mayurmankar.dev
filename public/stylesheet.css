@@ -216,19 +216,26 @@ hr.soft {
 
 /* Technical skills */
 
+/* One grid for all groups so the label column lines up across them;
+   labels stay on one line and size the column, values wrap. */
+.skills {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 24px;
+}
+
+.skills strong {
+  white-space: nowrap;
+}
+
 .skills-group {
+  grid-column: 1 / -1;
   font-size: 1.15em;
-  margin: 22px 0 10px;
+  margin: 14px 0 2px;
 }
 
 .skills-group:first-child {
   margin-top: 4px;
-}
-
-.skills {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 8px 24px;
 }
 
 /* Experience, publication and project entries */
@@ -321,7 +328,7 @@ hr.soft {
     margin-top: 10px;
   }
 
-  .skills strong:first-child {
+  .skills-group + strong {
     margin-top: 0;
   }
 

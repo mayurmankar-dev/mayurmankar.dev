@@ -226,12 +226,16 @@ hr.soft {
 
 .skills strong {
   white-space: nowrap;
+  color: #6e685e;
 }
 
+/* Group headings: larger and ruled so they read a level above the labels */
 .skills-group {
   grid-column: 1 / -1;
-  font-size: 1.15em;
-  margin: 14px 0 2px;
+  font-size: 1.3em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #6e685e;
+  margin: 20px 0 2px;
 }
 
 .skills-group:first-child {

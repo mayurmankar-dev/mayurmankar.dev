@@ -216,6 +216,15 @@ hr.soft {
 
 /* Technical skills */
 
+.skills-group {
+  font-size: 1.15em;
+  margin: 22px 0 10px;
+}
+
+.skills-group:first-child {
+  margin-top: 4px;
+}
+
 .skills {
   display: grid;
   grid-template-columns: 220px 1fr;
